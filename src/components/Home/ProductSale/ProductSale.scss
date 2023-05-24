@@ -1,0 +1,44 @@
+.product-sale {
+    margin-bottom: 50px;
+    padding: 5px 0;
+
+    .product-item {
+        .card {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            margin: 0 auto;
+            .card-img-top {
+                height: 270px;
+                width: 100%;
+                text-align: center;
+            }
+            .card-body {
+                .product-name {
+                    font-size: 0.8rem;
+                    margin: 0;
+                }
+                .product-price {
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                    margin: 0;
+                    span {
+                        &:first-child {
+                            color: goldenrod;
+                        }
+                        &:nth-child(3){
+                            margin-right: 3px;
+                            text-decoration: underline;
+                        }
+                        &:nth-child(4) {
+                            text-decoration: line-through;
+                            color: gray;
+                        }
+                        &:nth-child(5) {
+                            color: gray;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

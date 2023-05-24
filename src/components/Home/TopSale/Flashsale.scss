@@ -1,0 +1,55 @@
+.flash-sale {
+    position: relative;
+    background-color: #131313;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .sale-img {
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 109%;
+        img  {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+    }
+
+    .sale-color {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 10%;
+        background-color: white;
+    }
+
+    .sale-time {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        height: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .time-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            color: #131313;
+            margin-left: 5px;
+            height: 40px;
+            width: 40px;
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 5px;
+        }
+    }
+}

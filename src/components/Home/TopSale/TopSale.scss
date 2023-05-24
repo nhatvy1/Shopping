@@ -1,0 +1,29 @@
+.top-sale {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1200px;
+    margin: 50px auto;
+    .top-sale-item {
+        .top-sale-item-img {
+            border: 1px solid lightgray;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            img {
+                border-radius: 50%;
+                width: 90%;
+                height: 90%;
+                background-size: contains;
+            }
+        }
+        .top-sale-item-text {
+            text-align: center;
+            margin: 0;
+            font-weight: bold;
+        }
+    }
+}
