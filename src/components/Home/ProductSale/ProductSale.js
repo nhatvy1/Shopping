@@ -14,7 +14,7 @@ import img5 from '../../../assets/img/5.webp';
 const ProductSale = (props)=> {
     let settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1

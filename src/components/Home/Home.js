@@ -1,5 +1,4 @@
 import Banner from './Banner/Banner';
-import Footer from './Footer/Footer';
 import ProductSale from './ProductSale/ProductSale';
 import Flashsale from './TopSale/Flashsale';
 import TopSale from './TopSale/TopSale';
@@ -15,8 +14,6 @@ const Home = (props)=> {
             <TopSale />
             <Flashsale />   
             <ProductSale />
-
-            <Footer />
         </div>
     )
 }

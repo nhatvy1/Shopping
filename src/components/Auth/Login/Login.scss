@@ -1,0 +1,98 @@
+.login-container {
+    width: 1200px;
+    margin: 90px auto;
+    .loader-icon{
+        color: blue;
+        margin-right: 7px;
+        top: 2px;
+        animation: spin 1s infinite linear;
+    }
+    
+    @keyframes spin {
+        from {
+            transform: scale(1) rotate(0deg);
+        }
+        to {
+            transform: scale(1) rotate(360deg);
+        }
+    }
+    
+    .header {
+        height: 45px;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 10px;
+        button {
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 0 3px;
+            padding: 4px 5px;
+            background: none;
+            font-size: 12px;
+        }
+    }
+    
+    .title {
+        font-size: 25px;
+        padding: 20px 0;
+    }
+
+    .welcome {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .form-login {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        button {
+            width: 100%;
+            height: 40px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+
+            &:disabled {
+                background-color: #dddddd !important;
+                color: #afafaf !important;
+                cursor: no-drop;
+            }
+        }
+
+        .password-cus {
+            position: relative;
+            span {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .img-preview {
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            .img-display {
+                border: 1px dashed lightgray;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img  {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .back {
+        cursor: pointer;
+    }
+}
