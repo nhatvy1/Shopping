@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
+import { Buffer } from 'buffer';
 
 const Table = (props)=> {
     const { listUsers, pageCount } = props
     // Invoke when user click to request another page.
     // const [pageCount, setPageCount] = useState(0);
     const handlePageClick = (event) => {
-        props.fetchListUserWithPaginate(+event.selected+1)
+        props.fetchListUsers(+event.selected+1)
         props.setCurrentPage(+event.selected+1)
     };
+
     return (
         <>
             <table className="table table-hover table-bordered mt-5">
@@ -17,6 +19,7 @@ const Table = (props)=> {
                         <th scope="col">NO</th>
                         <th scope="col">Username</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Role</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -24,12 +27,26 @@ const Table = (props)=> {
                 <tbody>
                     {listUsers && listUsers.length > 0 &&
                         listUsers.map((user, index)=> {
+                            if (user.image !== null) {
+                                var buffer = Buffer(user.image);
+                                var string = buffer.toString('base64')
+                            }
                             return (
                                 <tr key={index}>
                                     <th>{user.id}</th>
-                                    <td>{user.username}</td>
+                                    <td>{user.firstName} {user.lastName}</td>
                                     <td>{user.email}</td>
-                                    <td>{user.role}</td>
+                                    <td>
+                                        {
+                                            user.image !== null ? 
+                                            <img src={`data:image/png;base64,${string}`} 
+                                                width={100} height={100}
+                                            />
+                                            :    
+                                            'Ko có hình'
+                                        }
+                                    </td>
+                                    <td>{user.roleId === 3 ? 'KH': null}</td>
                                     <td>
                                         <button className="btn btn-primary"
                                             onClick={()=>props.handleClickBtnViewDetail(user)}
@@ -78,3 +95,5 @@ const Table = (props)=> {
         </>
     )
 }
+
+export default Table

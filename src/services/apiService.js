@@ -5,12 +5,8 @@ const postCreateUser = (obj)=> {
     return axios.post('api/register-user', obj)
 }
 
-const getAllUsers = (id)=> {
-    return axios.get(`api/get-all-users?id=${id}`)
-}
-
-const getUserWithPaginate = (page, limit)=> {
-    return axios.get(`api/v1/participant?page=${page}&limit=${limit}`)
+const getAllUsers = (page)=> {
+    return axios.get(`api/get-users?page=${page}`)
 }
 
 export {
