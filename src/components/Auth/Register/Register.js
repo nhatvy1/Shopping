@@ -7,7 +7,7 @@ import '../Login/Login.scss';
 import { FcPlus } from 'react-icons/fc';
 import { toast } from 'react-toastify'; 
 import _ from 'lodash';
-import { postCreateUser } from '../../../services/apiService';
+import { postCreateUser } from '../../../services/apiUserService';
 
 const Register = (props)=> {
     const [email, setEmail] = useState("")

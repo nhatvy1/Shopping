@@ -6,7 +6,7 @@ import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import './ModalUser.scss';
 import { toast } from 'react-toastify'; 
 import _ from 'lodash';
-import { postCreateUser } from '../../../../services/apiService';
+import { postCreateUser } from '../../../../services/apiUserService';
 
 const ModalCreateUser = (props)=> {
     const { show, setShow } = props

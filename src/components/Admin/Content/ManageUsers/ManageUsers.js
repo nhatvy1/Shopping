@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Table from '../Table/Table'
 import './ManageUsers.scss';
 import { FcPlus } from 'react-icons/fc';
-import { getAllUsers } from '../../../../services/apiService';
+import { getAllUsers } from '../../../../services/apiUserService';
 import ModalCreateUser from '../ModalUser/ModalCreateUser';
 
 const ManageUsers = (props)=> {

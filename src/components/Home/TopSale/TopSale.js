@@ -7,7 +7,7 @@ import './TopSale.scss';
 
 const TopSale = (props)=> {
     return (
-        <div class="top-sale">
+        <div className="top-sale">
             <div className="top-sale-item">
                 <div className="top-sale-item-img">
                     <img src={img1} alt="" />
